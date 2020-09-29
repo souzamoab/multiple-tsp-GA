@@ -10,7 +10,7 @@ import mtsp.MTSP;
 
 public class Main {
 	
-	public static int TAM_POPULACAO = 500;
+	public static int TAM_POPULACAO = 1000;
 	public static int TAM_ELITISMO = 2;
 	public static int TAM_TORNEIO = 5;
 	public static double TAXA_MUTACAO = 0.001;

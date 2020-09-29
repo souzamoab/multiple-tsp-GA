@@ -2,16 +2,6 @@ package heuristica;
 
 import cidade.Cidade;
 
-/**
- * The main Evaluation class for the TSP. It's pretty simple -- given an
- * Individual (ie, a chromosome) and a list of canonical cities, calculate the
- * total distance required to travel to the cities in the specified order. The
- * result returned by getDistance() is used by GeneticAlgorithm.calcFitness.
- * 
- * @author bkanber
- *
- */
-
 public class Rota {
 	private Cidade rota[];
 	private double distancia = 0;
@@ -25,7 +15,6 @@ public class Rota {
 		for (int geneIndex = 0; geneIndex < cromossomos.length; geneIndex++) {
 			this.rota[geneIndex] = cidades[cromossomos[geneIndex]];
 		}
-		//this.rota[cromossomos.length-1] = cidades[cromossomos[0]];
 	}
 
 	public double getDistancia() {

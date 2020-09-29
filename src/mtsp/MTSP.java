@@ -15,18 +15,6 @@ public class MTSP {
 		//Avaliando população
 		ag.avaliarPopulacao(populacao, cidades);
 
-		/*
-		 * 
-		 * Rota inicial deve ser dividida entre os caixeiros de acordo com o número pré-definido
-		 * 
-		 * rotaInicial: 1->2->3->4->5->6->7->8->9->10->11->12->13->14->15
-		 * 
-		 * 1) Atribuir 1 a primeira e última cidade da rota de cada caixeiro
-		 * 2) Se 
-		 * 		
-		 *  
-		 * 
-		 */
 		Rota rotaInicial = new Rota(populacao.getFittest(0), cidades);
 		System.out.println("Distância inicial: " + rotaInicial.getDistancia());
 		
