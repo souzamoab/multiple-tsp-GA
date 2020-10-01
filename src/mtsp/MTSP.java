@@ -20,15 +20,19 @@ public class MTSP {
 		
 		int geracao = 1;
 		
-		while (ag.isTerminationConditionMet(geracao, ag.getMaxGeracoes()) == false) {
+		while (ag.isParada(geracao, ag.getMaxGeracoes()) == false) {
+			
 			//Melhor individuo da população
 			Rota rota = new Rota(populacao.getFittest(0), cidades);
 			System.out.println("G" + geracao + " Melhor distância: " + rota.getDistancia());
 
+			//Aplicando crossover na população
 			populacao = ag.crossoverPopulacao(populacao);
 
+			//Aplicando mutação na população
 			populacao = ag.mutacaoPopulacao(populacao);
 
+			//Avaliando população
 			ag.avaliarPopulacao(populacao, cidades);
 
 			geracao++;

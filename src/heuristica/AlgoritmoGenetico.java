@@ -30,7 +30,7 @@ public class AlgoritmoGenetico {
 	}
 
 	//Condição de parada
-	public boolean isTerminationConditionMet(int geracoesCont, int maxGeracoes) {
+	public boolean isParada(int geracoesCont, int maxGeracoes) {
 		return (geracoesCont > maxGeracoes);
 	}
 
@@ -129,6 +129,7 @@ public class AlgoritmoGenetico {
 		
 		Populacao novaPopulacao = new Populacao(this.tamanhoPopulacao);
 
+		//Realizando mutação utilizando a técnica de swap
 		for (int populacaoIndex = 0; populacaoIndex < populacao.size(); populacaoIndex++) {
 			Individuo individuo = populacao.getFittest(populacaoIndex);
 
